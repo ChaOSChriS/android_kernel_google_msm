@@ -86,6 +86,6 @@ kernelconfig: $(KERNEL_OUT) $(KERNEL_CONFIG)
 	     $(MAKE) -C kernel/lge/mako O=$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=arm-eabi- menuconfig
 	env KCONFIG_NOTIMESTAMP=true \
 	     $(MAKE) -C kernel/lge/mako O=/$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=arm-eabi- savedefconfig
-	cp $(KERNEL_OUT)/defconfig kernel/arch/arm/configs/$(KERNEL_DEFCONFIG)
+	cp $(KERNEL_OUT)/defconfig kernel/lge/mako/arch/arm/configs/$(KERNEL_DEFCONFIG)
 
 endif
